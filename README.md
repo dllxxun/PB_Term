@@ -26,7 +26,11 @@ npm install
 npx react-native run-android
 ```
 
-## Firebase 사용
+## Firebase 연동 코드 위치
+**Web App**
+- `src/utils/firebase.js` : Firebase 초기화 + GoogleAuthProvider
+- `src/components/Login.jsx` : `signInWithPopup` 실제 사용
 
-Authentication: 익명 로그인
-Firestore: Todo 데이터 저장 (웹/모바일 공용)
+**Mobile App**  
+- `App.tsx` : 익명 로그인 `auth().signInAnonymously()` + Firestore `todos` 쿼리
+- 동일 Firebase projectId 사용 (웹과 데이터 공유 확인)
