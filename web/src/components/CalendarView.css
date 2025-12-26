@@ -1,0 +1,73 @@
+/* 전체 페이지 래퍼 */
+.calendar-page {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* 상단 년/월 타이틀 */
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.calendar-header h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* react-calendar 기본 스타일 덮어쓰기 */
+.clean-calendar {
+  border: none;
+  width: 100%;
+  background: #ffffff;
+  font-family: inherit;
+}
+
+/* 요일 행 */
+.clean-calendar .react-calendar__month-view__weekdays {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* 요일 텍스트 */
+.clean-calendar .react-calendar__month-view__weekdays__weekday {
+  padding: 8px 0;
+}
+
+/* 날짜 셀 */
+.clean-calendar .react-calendar__tile {
+  padding: 14px 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* 오늘 날짜 */
+.clean-calendar .react-calendar__tile--now {
+  background: #f3f4ff;
+  border-radius: 999px;
+}
+
+/* 선택된 날짜 */
+.clean-calendar .react-calendar__tile--active {
+  background: #111827;
+  color: #ffffff;
+  border-radius: 999px;
+}
+
+/* 일요일/토요일 색 */
+.clean-calendar .react-calendar__month-view__days__day--weekend:nth-child(7n) span,
+.clean-calendar .react-calendar__month-view__days__day--weekend:nth-child(7n+1) span {
+  color: #ef4444; /* 일요일 */
+}
+
+.clean-calendar .react-calendar__month-view__days__day:nth-child(7n) span {
+  color: #2563eb; /* 토요일 */
+}
+
+/* hover 효과 */
+.clean-calendar .react-calendar__tile:enabled:hover {
+  background: #e5e7eb;
+  border-radius: 999px;
+}
